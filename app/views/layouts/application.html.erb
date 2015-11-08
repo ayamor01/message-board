@@ -6,13 +6,27 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+    .navbar {
+      padding-bottom: 30px;
+    }
+  
+    .navbar h1 {
+      font-weight: bold;
+    }
+    
+    body {
+      background-color: #D7EEFF;
+    }
+    
+  </style>
 </head>
 
 <body>
   <nav class="navbar">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Message Board</a>
+        <a class="navbar-brand" href="#"><h1>Message Board</h1></a>
       </div>
     </div>
   </nav>
