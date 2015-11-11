@@ -21,7 +21,20 @@
 </div>
 
 <div class="form-horizontal">
-  <%= form_for(Message.new) do |f| %>
+  <%= form_for(@message) do |f| %>
+   <% if @message.errors.present? %>
+    <div class="alert alert-danger">
+      <%= alert %>
+      <ul>
+        <% @message.errors.full_messages.each do |full_message| %>
+          <li>
+            <%= full_message %>
+          </li>
+        <% end %> 
+      </ul>
+    </div>
+   <% end %>
+  
     <div class="form-group">
       <label for="input_name", class="control-label col-sm-1">名前</label>
       <div class="col-sm-11">
